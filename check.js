@@ -7,7 +7,7 @@ const URL =
 const SERVICE_TEXT = "Führerscheinstelle allgemein";
 
 const browser = await chromium.launch({
-  headless: true,
+  headless: false,
   args: ["--no-sandbox"]
 });
 
@@ -18,6 +18,9 @@ try {
     waitUntil: "networkidle",
     timeout: 60000
   });
+
+  console.log(await page.content());
+  await page.screenshot({ path: "debug.png", fullPage: true });
 
   // -----------------------------
   // 1. Select service + increment
