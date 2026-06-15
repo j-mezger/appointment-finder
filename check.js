@@ -22,6 +22,9 @@ try {
   // -----------------------------
   // 1. Select service + increment
   // -----------------------------
+  
+  // wait for service list to actually appear (not just network idle)
+  await page.waitForSelector(".service_selector", { timeout: 30000 });
   const serviceContainer = page
     .locator(".service_selector")
     .filter({ hasText: SERVICE_TEXT });
