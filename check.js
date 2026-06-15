@@ -19,7 +19,7 @@ try {
 
   await page.waitForTimeout(5000);
 
-  const text = (await page.locator(".appointment_content").innerText()).toLowerCase();
+  const text = (await page.locator("appointment_holder").innerText()).toLowerCase();
 
   const noAppointmentPatterns = [
     "aktuell sind alle verfügbaren termine ausgebucht"
