@@ -1,0 +1,12 @@
+{
+  "name": "appointment-finder",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node check.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.0",
+    "playwright": "^1.49.0"
+  }
+}
